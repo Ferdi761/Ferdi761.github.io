@@ -1,0 +1,41 @@
+body {
+    margin: 0px;
+    background-color: darkkhaki;
+  }
+  
+  #bio {
+    background-color: slategrey;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid;
+  }
+  
+  #bio img {
+    border: 2px solid black;
+  }
+  
+  table {
+    background-color: bisque;
+    border: 8px double black;
+  }
+  
+  table tr th {
+    background-color: cadetblue;
+  }
+  
+  .pos {
+    padding-left: 75px;
+  }
+  
+  .pos h2 {
+    color: darkblue;
+  }
+  
+  #bio h4 a {
+    color: mintcream;
+  }
+  
+  .pos table {
+    text-align: center;
+  }
