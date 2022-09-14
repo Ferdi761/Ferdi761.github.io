@@ -1,0 +1,51 @@
+body {
+    margin: 0px;
+}
+
+header {
+    background-color: orange;
+    padding: 5px;
+}
+
+header h1 {
+    margin-bottom: 2px;
+}
+
+nav {
+    background-color: orange;
+    padding: 5px;
+}
+
+nav a {
+    background-color: gainsboro;
+    margin: 2px;
+    text-decoration: none;
+}
+
+#content {
+    display: inline-block;
+}
+
+article {
+    box-shadow: 3px 3px 5px black;
+    border-radius: 5px;
+    margin: 10px 20px;
+    padding: 1rem;
+}
+
+.news {
+    
+}
+
+.category {
+    background-color: chocolate;
+    width: 25%;
+    float: right;
+}
+
+footer {
+    background-color: orange;
+    text-align: center;
+    margin-top: 1rem;
+}
+
