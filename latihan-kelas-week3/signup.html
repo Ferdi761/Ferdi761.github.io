@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Week 3 | Sign Up</title>
+  </head>
+  <body align="center">
+    <h2>Registrasi</h2>
+    <form onsubmit="create()">
+      <input type="text" name="name" id="name" placeholder="Nama Lengkap" />
+      <br />
+      <input type="email" name="email" id="email" placeholder="Email" />
+      <br />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Password"
+      />
+      <br />
+      <input
+        type="password"
+        name="passConfirm"
+        id="passConfirm"
+        placeholder="Konfrimasi Password"
+      />
+      <br />
+      <input type="submit" value="Buat" onclick="create()" />
+      <input type="reset" value="Reset" />
+    </form>
+
+    <script type="text/javascript">
+      var nama = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      var passConfirm = document.getElementById("passConfirm").value;
+
+      //validation code
+      var letters = /^[A-Za-z]+$/;
+      var email_val = /^[A-Za-z]+$/;
+
+      function create() {
+        if (nama == "" || email == "" || password == "" || passConfirm == "") {
+          console.log(nama, email, password, passConfirm);
+          alert("wajib isi semua kolom !");
+        } else if (!letters.test(nama)) {
+          alert("nama tidak valid !");
+        } else if (!email_val.test(email)) {
+          alert("email tidak vaild !");
+        } else if (password != passConfirm) {
+          alert("password tidak sama !");
+        } else if (document.getElementById("password").value.length > 12) {
+          alert("maksimum password adalah 12 !");
+        } else if (document.getElementById("password").value.length < 6) {
+          alert("minimum password adalah 6 !");
+        } else {
+          alert("registrasi berhasil ! redirect ke javatpoint");
+          window.location = "https://www.javatpoint.com/";
+        }
+      }
+    </script>
+  </body>
+</html>
