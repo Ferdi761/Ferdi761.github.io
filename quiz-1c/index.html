@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AchFerdi | Quiz 1</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h2>
+        <strong>
+          PEMERIINTAH KABUPATEN SOLOK
+          <br />
+          RUMAH SAKIT UMUM DAERAH AROSUKA
+        </strong>
+      </h2>
+      <p>
+        <em>
+          Jl. Raya Solok Padang KM. 20 Arosuka Kode Pos 27364
+          <br />
+          Provinsi Sumatera Barat Telp. / Fax (0755) 31160
+          <br />
+          Email : raudarosukakabsolok@gmail.com
+        </em>
+      </p>
+    </header>
+    <div class="main-content">
+      <h2>
+        <strong> FORMULIR PENDAFTARAN PASIEN BARU </strong>
+      </h2>
+      <h3>
+        <u> PERHATIAN : HARAP MENGISI FORMULIR INI DENGAN LENGKAP DAN JELAS </u>
+      </h3>
+      <div class="form-content">
+        <form action="#" onsubmit="validateForm()">
+          <h4>
+            <strong> I. IDENTITAS PASIEN </strong>
+          </h4>
+          <table>
+            <tr>
+              <td>Nama Pasien</td>
+              <td>
+                <input type="text" name="nama-pasien" id="nama-pasien" />
+              </td>
+            </tr>
+            <tr>
+              <td>Tempat Lahir</td>
+              <td>
+                <input
+                  type="text"
+                  name="tempat-lahir"
+                  id="tempat-lahir"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Tanggal Lahir</td>
+              <td>
+                <input type="date" name="tgl-lahir" id="tgl-lahir" required />
+              </td>
+            </tr>
+            <tr>
+              <td>Jenis Kelamin</td>
+              <td>
+                <input type="radio" name="gender" id="l" />
+                <label for="l">Laki-laki</label>
+                <input type="radio" name="gender" id="p" />
+                <label for="p">Perempuan</label>
+              </td>
+            </tr>
+            <tr>
+              <td>Alamat</td>
+              <td><input type="text" name="alamat" id="alamat" required /></td>
+            </tr>
+            <tr>
+              <td>RT</td>
+              <td><input type="text" name="rt" id="rt" required /></td>
+            </tr>
+            <tr>
+              <td>RW</td>
+              <td><input type="text" name="rw" id="rw" required /></td>
+            </tr>
+            <tr>
+              <td>Provinsi</td>
+              <td>
+                <input type="text" name="prov" id="prov" required />
+              </td>
+            </tr>
+            <tr>
+              <td>Kecamatan</td>
+              <td>
+                <input type="text" name="kec" id="kec" required />
+              </td>
+            </tr>
+            <tr>
+              <td>Kelurahan</td>
+              <td>
+                <input type="text" name="kel" id="kel" required />
+              </td>
+            </tr>
+            <tr>
+              <td>No. Telp</td>
+              <td>
+                <input type="tel" name="telp" id="telp" required />
+              </td>
+            </tr>
+            <tr>
+              <td>Kode Pos</td>
+              <td>
+                <input type="number" name="pos" id="pos" required />
+              </td>
+            </tr>
+            <tr>
+              <td>Agama</td>
+              <td>
+                <select name="agama" id="agama">
+                  <option value="1" selected>Islam</option>
+                  <option value="2">Kristen</option>
+                  <option value="3">Katholik</option>
+                  <option value="4">Buddha</option>
+                  <option value="5">Konghucu</option>
+                  <option value="6">Kepercayaan terhadap Tuhan YME</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Pendidikan</td>
+              <td>
+                <input type="text" name="pendidikan" id="pendidikan" required />
+              </td>
+            </tr>
+            <tr>
+              <td>Pekerjaan</td>
+              <td>
+                <input type="text" name="pekerjaan" id="pekerjaan" required />
+              </td>
+            </tr>
+          </table>
+          <h4>
+            <strong> II. PENANGGUNG JAWAB PASIEN </strong>
+          </h4>
+          <table>
+            <tr>
+              <td>Hubungan dengan Pasien</td>
+              <td>
+                <input type="text" name="hubungan" id="hubungan" required />
+              </td>
+            </tr>
+            <tr>
+              <td>Nama Penanggung Jawab</td>
+              <td>
+                <input type="text" name="nama-pj" id="nama-pj" required />
+              </td>
+            </tr>
+            <tr>
+              <td>Pendidikan Penanggung Jawab</td>
+              <td>
+                <input
+                  type="text"
+                  name="pendidikan-pj"
+                  id="kpndidikan-pj"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Pekerjaan Penanggung Jawab</td>
+              <td>
+                <input
+                  type="text"
+                  name="pekerjaan-pj"
+                  id="pekerjaan-pj"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Tanda Tangan</td>
+              <td>
+                <input type="file" name="ttd" id="ttd" required />
+              </td>
+            </tr>
+          </table>
+          <button type="submit">Daftar</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
