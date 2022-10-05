@@ -1,0 +1,65 @@
+body {
+    /* background url */
+    background-image: url("./img/indomap.png");
+
+     /* Center and scale the image nicely */
+     background-position:center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+
+     margin: 0;
+}
+
+.header {
+    display: block;
+    background-color: rgba(255, 0, 0, 0.7);
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: -10px;
+    padding: 1px;
+}
+
+.content {
+    /* centered div */
+    display: grid;
+    /* place-items: center; */
+
+    width: 380px;
+    height: 300px;
+    background-color: rgba(165, 185, 170, 0.6);
+    border-radius: 1rem;
+    margin: 10rem auto;
+    padding-top: 5px;
+}
+
+.content h2 {
+    margin: 5px;
+    text-align: center;
+}
+
+.form-control {
+    margin: 10px 20px;
+}
+
+.form-control input {
+    width: 100%;
+}
+
+.submit {
+    margin: 15px;
+}
+
+.submit button {
+    width: 100%;
+}
+
+footer {
+    background-color: white;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    padding: 5px;
+    z-index: 999;
+}
