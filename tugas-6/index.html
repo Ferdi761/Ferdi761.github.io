@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AchFerdi | Tugas 6</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JQuery library -->
+    <script src="./jquery-3.6.1.min.js"></script>
+    <!-- JQuery validate library -->
+    <script src="./jquery.validate.js"></script>
+
+    <!-- my css -->
+    <style>
+      .error {
+        color: red;
+        font-size: small;
+      }
+    </style>
+    <!-- my script -->
+    <script>
+      $(document).ready(() => {
+        $.validator.addMethod(
+          "indonesianDate",
+          function (value, element) {
+            // put your own logic here, this is just a (crappy) example
+            return value.match(/^\d\d?\/\d\d?\/\d\d\d\d$/);
+          },
+          "mohon masukkan tanggal lahir dengan format DD/MM/YYYY"
+        );
+
+        $("#myForm").validate({
+          rules: {
+            nim: {
+              required: true,
+              digits: true,
+              minlength: 10,
+              maxlength: 10,
+            },
+            nama: {
+              required: true,
+            },
+            alamat: {
+              required: true,
+            },
+            tglLahir: {
+              required: true,
+              indonesianDate: true,
+            },
+            umur: {
+              required: true,
+              digits: true,
+              range: [0, 100],
+            },
+            email: {
+              required: true,
+              email: true,
+            },
+            situs: {
+              required: true,
+              url: true,
+            },
+            pass1: {
+              required: true,
+              minlength: 8,
+            },
+            pass2: {
+              required: true,
+              equalTo: "#pass1",
+            },
+          },
+
+          messages: {
+            nim: {
+              required: "kolom harus diisi",
+              minlength: "panjang input harus 10 digit",
+              maxlength: "panjang input harus 10 digit",
+              digits: "hanya dapat berupa angka",
+            },
+            nama: {
+              required: "kolom harus diisi",
+            },
+            alamat: {
+              required: "kolom harus diisi",
+            },
+            tglLahir: {
+              required: "kolom harus diisi",
+            },
+            umur: {
+              required: "kolom harus diisi",
+              digits: "hanya dapat berupa angka",
+            },
+            email: {
+              required: "kolom harus diisi",
+              email: "mohon masukkan email yang valid",
+            },
+            situs: {
+              required: "kolom harus diisi",
+              url: "mohon masukkan link yang valid",
+            },
+            pass1: {
+              required: "kolom harus diisi",
+              minlength: "Panjang minimum harus 8 karakter",
+            },
+            pass2: {
+              required: "kolom harus diisi",
+              equalTo: "password tidak sama",
+            },
+          },
+
+          submitHandler: (form) => {
+            alert("data berhasil terdaftar");
+            form.submit();
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div
+        class="form-container my-5 mx-auto pt-2 col-6"
+        style="border: solid 2px grey; border-radius: 20px"
+      >
+        <h2 class="ms-3">Form Sign Up</h2>
+        <form id="myForm">
+          <div class="mb-3 mx-3 my-3">
+            <label for="nim" class="form-label">NIM:</label>
+            <input
+              type="text"
+              name="nim"
+              id="nim"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="mb-3 mx-3 my-3">
+            <label for="nama" class="form-label">NAMA:</label>
+            <input
+              type="text"
+              name="nama"
+              id="nama"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="mb-3 mx-3 my-3">
+            <label for="alamat" class="form-label">ALAMAT:</label>
+            <textarea
+              name="alamat"
+              id="alamat"
+              class="form-control"
+              cols="20"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <div class="mb-3 mx-3 my-3">
+            <label for="tglLahir" class="form-label">TANGGAL LAHIR:</label>
+
+            <input
+              type="text"
+              name="tglLahir"
+              id="tglLahir"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="mb-3 mx-3 my-3">
+            <label for="umur" class="form-label">UMUR:</label>
+
+            <input
+              type="number"
+              name="umur"
+              id="umur"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="mb-3 mx-3 my-3">
+            <label for="email" class="form-label">EMAIL:</label>
+
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="mb-3 mx-3 my-3">
+            <label for="situs" class="form-label">ALAMAT SITUS:</label>
+            <input
+              type="text"
+              name="situs"
+              id="situs"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="mb-3 mx-3 my-3">
+            <label for="pass1" class="form-label">PASSWORD:</label>
+
+            <input
+              type="password"
+              name="pass1"
+              id="pass1"
+              class="form-control"
+              required
+            />
+
+            <label for="pass1" id="pass1-text" class="form-text"></label>
+          </div>
+          <div class="mb-3 mx-3 my-3">
+            <label for="pass2" class="form-label">ULANGI PASSWORD:</label>
+
+            <input
+              type="password"
+              name="pass2"
+              id="pass2"
+              class="form-control"
+              required
+            />
+
+            <label for="pass2" id="pass2-text" class="form-text"></label>
+          </div>
+          <div class="mb-3 mx-3 my-3 col-12">
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
