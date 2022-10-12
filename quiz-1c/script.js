@@ -1,13 +1,17 @@
 function validateForm() {
-    let form = document.querySelector('form').value;
-    if (form == null) {
-        alert("mohon isi data secara lengkap!");
-        console.log(form);
-        return false;
+    let errCheck = 0;
+    let inputForm = document.querySelectorAll("input");
+    for (let i = 0; i < inputForm.length; i++) {
+        if (!inputForm[i].value) {
+            errCheck += 1;
+        }
+        continue;
+    }
+
+    if (errCheck !== 0) {
+        return alert("Mohon isi semua data!");
     }
     else {
-        alert("Pendaftaran Sukses!");
-        console.log(form);
-        return true;
+        return alert("Pendaftaran sukses!");
     }
 }
